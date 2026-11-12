@@ -1,0 +1,10 @@
+CREATE TABLE catalogo_cache (
+    clave INTEGER NOT NULL PRIMARY KEY,
+    contenido TEXT NOT NULL
+);
+
+leer:
+SELECT contenido FROM catalogo_cache WHERE clave = 1;
+
+guardar:
+INSERT OR REPLACE INTO catalogo_cache(clave, contenido) VALUES (1, ?);
